@@ -588,13 +588,14 @@ public:
      */
     bool isValid() const { return !_invalid; }
 
+    void restartDirector();
+
 protected:
     void reset();
 
     void purgeDirector();
     bool _purgeDirectorInNextLoop = false; // this flag will be set to true in end()
     
-    void restartDirector();
     bool _restartDirectorInNextLoop = false; // this flag will be set to true in restart()
     
     void setNextScene();
